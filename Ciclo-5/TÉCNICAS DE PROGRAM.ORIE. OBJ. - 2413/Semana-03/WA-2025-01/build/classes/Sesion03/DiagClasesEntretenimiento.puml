@@ -1,0 +1,50 @@
+@startuml
+class Televisor{
+    - int canal
+    - int brillo
+    - String modelo
+    - String marca
+    - Double precio
+    + cambiar_canal()
+    + calcular_precio_reventa()
+    + ir_al_canal()
+}
+
+class Persona{
+    - String DNI
+    - String nombres
+    - String apaterno
+    - String amaterno
+    - int edad
+    - String direccion
+    + encender_televisor()
+}
+
+class Servicio{
+    - String codigo
+    - String empresa
+    - String tipo
+    - Double tarifa_mensual
+    + contratar_servicio()
+    + rescindir_servicio()
+}
+
+class Accesorio{
+    - String codigo
+    - String nombre
+    - String marca
+    - String numero_serie
+    + instalar_accesorio()
+}
+
+class EquipoInformatico{
+    - String codigo
+    - String nombre
+    - Double precio_compra
+    - Boolean estado
+    + conectar_red()
+}
+
+Persona "1" -- "0..n" Televisor: pertenece a <
+
+@enduml
